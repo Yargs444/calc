@@ -1,2 +1,2 @@
 # calc
-Calculator made with Electron.
+Calculator.
