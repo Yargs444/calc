@@ -3,28 +3,20 @@
 
 <head>
   <meta charset="UTF-8">
-  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
   <title>calc</title>
 
+  <!--! STYLE CALL -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- <h1>calc</h1> -->
-  <!-- We are using Node.js <span id="node-version"></span>,
-  Chromium <span id="chrome-version"></span>,
-  and Electron <span id="electron-version"></span>. -->
-
-  <!--! MAIN CODE [BEGIN] -->
-
   <span id="displaySpan">0</span>
 
   <table id="calcTable">
     <!--? ['C', 'BACKSPACE', '/'] -->
     <tr>
       <td>
-        <button class="opButton" id="btnCancel">C</button>
+        <button class="opButton" id="btnCancel" onclick="test()">C</button>
       </td>
       <td colspan="2">
         <button class="opButton" id="btnBackspace">BACKSPACE</button>
@@ -99,9 +91,7 @@
     </tr>
   </table>
 
-  <!--! MAIN CODE [END] -->
-
-  <script src="./renderer.js"></script>
+  <!--! SCRIPT CALL -->
   <script type="text/javascript" src="script.js"></script>
 </body>
 
