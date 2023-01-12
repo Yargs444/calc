@@ -2,6 +2,10 @@
   color: blue;
 }
 
+body {
+  background: red;
+}
+
 #displaySpan {
   font-size: 5vw;
   width: 100%;
