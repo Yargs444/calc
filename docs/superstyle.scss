@@ -7,7 +7,7 @@ $color: #000;
 $color: #000;
 
 * {
-  color: blue;
+  color: #0000ff;
 }
 
 body {
@@ -17,11 +17,11 @@ body {
 #content {
   h1, a {
     text-align: center;
-    background-color: #515151;
-    color: #111111;
     width: 15vw;
     font-size: 3vw;
     margin: 0 auto;
+    background-color: #515151;
+    color: #111111;
   }
 
   // position: relative;
@@ -37,10 +37,11 @@ body {
     font-size: 5vw;
     width: 100%;
     height: 100%;
-    border: 1px solid black;
     text-align: right;
     display: block;
     // padding: 1vw;
+    color: #0000ff;
+    border: 1px solid #000000;
   }
 
   #calcTable {
@@ -48,18 +49,21 @@ body {
     // top: 30vh;
     width: 100%;
     height: 100%;
-    border: 1px solid black;
     border-collapse: collapse;
+    border: 1px solid #000000;
 
     button {
       width: 100%;
       height: 100%;
-      border: 1px solid black;
       border-collapse: collapse;
       font-size: 5vw;
+      color: $shy-dark;
+      border: 1px solid #000000;
 
       &:hover {
-        background-color: #ffffff;
+        filter: invert(100%);
+        transition: all 0.08s ease;
+        box-shadow: inset 5px #ccc;
       }
     }
 
