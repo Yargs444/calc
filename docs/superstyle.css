@@ -1,0 +1,51 @@
+* {
+  color: blue;
+}
+
+body {
+  background-color: #000;
+}
+
+#content {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #c8c8c8 20%, #525252 80%);
+}
+#content h1, #content a {
+  text-align: center;
+  background-color: #515151;
+  color: #111111;
+  width: 15vw;
+  font-size: 3vw;
+  margin: 0 auto;
+}
+#content #displaySpan {
+  font-size: 5vw;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  text-align: right;
+  display: block;
+}
+#content #calcTable {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+#content #calcTable button {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 5vw;
+}
+#content #calcTable button:hover {
+  background-color: #ffffff;
+}
+#content #calcTable #btnCancel {
+  background-color: #ff0000;
+  color: #000000;
+}/*# sourceMappingURL=superstyle.css.map */

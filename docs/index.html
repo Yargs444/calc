@@ -6,90 +6,94 @@
   <title>calc</title>
 
   <!--! STYLE CALL -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="superstyle.css">
 </head>
 
 <body>
-  <span id="displaySpan">0</span>
+  <div id="content">
+    <h1><a href="https://github.com/dudushy/calc">Calculator</a></h1>
 
-  <table id="calcTable">
-    <!--? ['C', 'BACKSPACE', '/'] -->
-    <tr>
-      <td>
-        <button class="opButton" id="btnCancel" onclick="test(event)">C</button>
-      </td>
-      <td colspan="2">
-        <button class="opButton" id="btnBackspace">BACKSPACE</button>
-      </td>
-      <td>
-        <button class="opButton" id="btnDivision">/</button>
-      </td>
-    </tr>
+    <span id="displaySpan">0</span>
 
-    <!--? ['7', '8', '9', '*'] -->
-    <tr>
-      <td>
-        <button class="numberButton" id="btn7">7</button>
-      </td>
-      <td>
-        <button class="numberButton" id="btn8">8</button>
-      </td>
-      <td>
-        <button class="numberButton" id="btn9">9</button>
-      </td>
-      <td>
-        <button class="opButton" id="btnMultiply">*</button>
-      </td>
-    </tr>
+    <table id="calcTable">
+      <!--? ['C', 'BACKSPACE', '/'] -->
+      <tr>
+        <td>
+          <button class="opButton" id="btnCancel" onclick="test(event)">C</button>
+        </td>
+        <td colspan="2">
+          <button class="opButton" id="btnBackspace">BACKSPACE</button>
+        </td>
+        <td>
+          <button class="opButton" id="btnDivision">/</button>
+        </td>
+      </tr>
 
-    <!--? ['4', '5', '6', '-'] -->
-    <tr>
-      <td>
-        <button class="numberButton" id="btn4">4</button>
-      </td>
-      <td>
-        <button class="numberButton" id="btn5">5</button>
-      </td>
-      <td>
-        <button class="numberButton" id="btn6">6</button>
-      </td>
-      <td>
-        <button class="opButton" id="btnSubstraction">-</button>
-      </td>
-    </tr>
+      <!--? ['7', '8', '9', '*'] -->
+      <tr>
+        <td>
+          <button class="numberButton" id="btn7">7</button>
+        </td>
+        <td>
+          <button class="numberButton" id="btn8">8</button>
+        </td>
+        <td>
+          <button class="numberButton" id="btn9">9</button>
+        </td>
+        <td>
+          <button class="opButton" id="btnMultiply">*</button>
+        </td>
+      </tr>
 
-    <!--? ['1', '2', '3', '+'] -->
-    <tr>
-      <td>
-        <button class="numberButton" id="btn1">1</button>
-      </td>
-      <td>
-        <button class="numberButton" id="btn2">2</button>
-      </td>
-      <td>
-        <button class="numberButton" id="btn3">3</button>
-      </td>
-      <td>
-        <button class="opButton" id="btnAddition">+</button>
-      </td>
-    </tr>
+      <!--? ['4', '5', '6', '-'] -->
+      <tr>
+        <td>
+          <button class="numberButton" id="btn4">4</button>
+        </td>
+        <td>
+          <button class="numberButton" id="btn5">5</button>
+        </td>
+        <td>
+          <button class="numberButton" id="btn6">6</button>
+        </td>
+        <td>
+          <button class="opButton" id="btnSubstraction">-</button>
+        </td>
+      </tr>
 
-    <!--? ['+/-', '0', '.', '='] -->
-    <tr>
-      <td>
-        <button class="opButton" id="btnInvert">+/-</button>
-      </td>
-      <td>
-        <button class="numberButton" id="btn0">0</button>
-      </td>
-      <td>
-        <button class="opButton" id="btnDot">.</button>
-      </td>
-      <td>
-        <button class="opButton" id="btnEquals">=</button>
-      </td>
-    </tr>
-  </table>
+      <!--? ['1', '2', '3', '+'] -->
+      <tr>
+        <td>
+          <button class="numberButton" id="btn1">1</button>
+        </td>
+        <td>
+          <button class="numberButton" id="btn2">2</button>
+        </td>
+        <td>
+          <button class="numberButton" id="btn3">3</button>
+        </td>
+        <td>
+          <button class="opButton" id="btnAddition">+</button>
+        </td>
+      </tr>
+
+      <!--? ['+/-', '0', '.', '='] -->
+      <tr>
+        <td>
+          <button class="opButton" id="btnInvert">+/-</button>
+        </td>
+        <td>
+          <button class="numberButton" id="btn0">0</button>
+        </td>
+        <td>
+          <button class="opButton" id="btnDot">.</button>
+        </td>
+        <td>
+          <button class="opButton" id="btnEquals">=</button>
+        </td>
+      </tr>
+    </table>
+  </div>
 
   <!--! SCRIPT CALL -->
   <script type="text/javascript" src="script.js"></script>
