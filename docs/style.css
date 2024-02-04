@@ -1,0 +1,238 @@
+:root {
+  --responsiveUnit: calc(1vmin + 1vmax);
+
+  --text: #ffffff;
+  --wall: #000000;
+
+  --primary: #3880ff;
+  --secondary: #3dc2ff;
+  --tertiary: #5260ff;
+  --success: #2dd36f;
+  --warning: #ffc409;
+  --danger: #eb445a;
+  --dark: #222428;
+  --medium: #92949c;
+  --light: #f4f5f8;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-height: 0;
+  min-width: 0;
+  user-select: none;
+}
+
+html,
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+  background: linear-gradient(0deg, var(--tertiary), var(--danger));
+  text-align: center;
+  font-family: monospace;
+}
+
+.calculator {
+  --calcHeight: calc(var(--responsiveUnit) * 30);
+  --calcWidth: calc(var(--responsiveUnit) * 60);
+  --calcBorder: calc(var(--responsiveUnit) * 0.1);
+  --calcBorderRadius: calc(var(--responsiveUnit) * 0.75);
+  --calcPadding: calc(var(--responsiveUnit) * 0.75);
+  --calcBackgroundOpacity: 0.5;
+
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: var(--calcBorder) solid var(--dark);
+  border-radius: calc(var(--responsiveUnit) * 0.75);
+  height: var(--calcHeight);
+  width: var(--calcWidth);
+  padding: var(--calcPadding);
+  backdrop-filter: blur(calc(var(--responsiveUnit) * 1));
+}
+
+.calculator::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--dark);
+  opacity: var(--calcBackgroundOpacity);
+  z-index: -1;
+}
+
+.calculator .display {
+  --displayText: calc(var(--responsiveUnit) * 3);
+  --displayBorderRadius: calc(var(--responsiveUnit) * 0.75);
+  --displayBackgroundOpacity: 0.8;
+  --displayMarginBottom: calc(var(--responsiveUnit) * 0.5);
+
+  position: relative;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: var(--displayBorderRadius);
+  text-indent: calc(var(--displayText) * -1);
+  font-size: var(--displayText);
+  margin-bottom: var(--displayMarginBottom);
+  overflow: hidden;
+  user-select: text;
+}
+
+.calculator .display::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--dark);
+  opacity: var(--displayBackgroundOpacity);
+  z-index: -1;
+}
+
+.calculator .keypad {
+  position: relative;
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator .keypad .row {
+  --rowCount: 6;
+  --rowHeight: calc(100% / var(--rowCount));
+  --rowPaddingBlock: calc(var(--responsiveUnit) * 0.5);
+
+  width: 100%;
+  height: var(--rowHeight);
+  padding-block: var(--rowPaddingBlock);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator .keypad .row:first-child {
+  padding-top: calc(var(--rowPaddingBlock) * 1.25);
+}
+
+.calculator .keypad .row:last-child {
+  padding-bottom: calc(var(--rowPaddingBlock) * 1.25);
+}
+
+.calculator .keypad .row button {
+  --buttonCount: 4;
+  --buttonFontSize: calc(var(--responsiveUnit) * 2);
+  --buttonMargin: calc(var(--responsiveUnit) * 0.5);
+  --buttonWidth: calc(100% / var(--buttonCount) - var(--buttonMargin) * 2);
+  --buttonBorder: calc(var(--responsiveUnit) * 0.1);
+  --buttonBorderRadius: calc(var(--responsiveUnit) * 2);
+  --buttonBackgroundOpacity: 0.7;
+
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  color: var(--light);
+  margin: var(--buttonMargin);
+  width: var(--buttonWidth);
+  height: 100%;
+  border: var(--buttonBorder) solid var(--medium);
+  border-radius: var(--buttonBorderRadius);
+  font-size: var(--buttonFontSize);
+  cursor: pointer;
+}
+
+.calculator .keypad .row button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--dark);
+  opacity: var(--buttonBackgroundOpacity);
+  z-index: -1;
+}
+
+.calculator .keypad .row button::after {
+  transition: all 0.25s ease-in-out;
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--light);
+  opacity: 0;
+  z-index: 1;
+}
+
+.calculator .keypad .row button:hover::after {
+  opacity: 0.5;
+}
+
+.calculator .keypad .row button.full {
+  --buttonCount: 1;
+}
+
+.calculator .keypad .row button.cancel::before,
+.calculator .keypad .row button.delete::before {
+  --buttonBackgroundOpacity: 1;
+  background: var(--danger);
+}
+
+.calculator .keypad .row button.theme::before,
+.calculator .keypad .row button.source::before {
+  background: var(--tertiary);
+}
+
+.calculator .keypad .row button.operator::before {
+  background: var(--medium);
+}
+
+.calculator .keypad .row button.equals {
+  color: var(--dark);
+}
+
+.calculator .keypad .row button.equals::before {
+  --buttonBackgroundOpacity: 0.75;
+  background: var(--light);
+}
+
+@media (orientation: portrait) {
+  .calculator {
+    --calcHeight: calc(var(--responsiveUnit) * 60);
+    --calcWidth: calc(var(--responsiveUnit) * 30);
+  }
+
+  .calculator .display {
+    --displayMarginBottom: calc(var(--responsiveUnit) * 1);
+
+    height: 10%;
+  }
+
+  .calculator .keypad {
+    height: 90%;
+  }
+
+  .calculator .keypad .row button {
+    --buttonFontSize: calc(var(--responsiveUnit) * 4);
+  }
+
+  .calculator .keypad .row button.theme {
+    --buttonFontSize: calc(var(--responsiveUnit) * 1.5);
+  }
+
+  .calculator .keypad .row button.source,
+  .calculator .keypad .row button.delete {
+    --buttonFontSize: calc(var(--responsiveUnit) * 2.5);
+  }
+}
