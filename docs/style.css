@@ -224,7 +224,7 @@ body {
 
 @media (orientation: portrait) {
   .calculator {
-    --calcHeight: calc(var(--responsiveUnit) * 60);
+    --calcHeight: calc(var(--responsiveUnit) * 50);
     --calcWidth: calc(var(--responsiveUnit) * 30);
   }
 
