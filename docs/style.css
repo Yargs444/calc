@@ -1,6 +1,5 @@
 :root {
   --responsiveUnit: calc(1vmin + 1vmax);
-  --dynamicHeight: 100vh;
 
   --text: #ffffff;
   --wall: #000000;
@@ -18,12 +17,6 @@
   --white: #ffffff;
 }
 
-@supports (--css: variables) {
-  :root {
-    --dynamicHeight: 100dvh;
-  }
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,9 +26,24 @@
   user-select: none;
 }
 
+@supports (height: 100dvh) {
+
+  html,
+  body {
+    height: 100dvh;
+  }
+}
+
+@supports not (height: 100vh) {
+
+  html,
+  body {
+    height: 100vh;
+  }
+}
+
 html,
 body {
-  height: var(--dynamicHeight);
   overflow: hidden;
 }
 
