@@ -158,6 +158,7 @@ body {
   --buttonBorderRadius: calc(var(--responsiveUnit) * 2);
   --buttonBackgroundOpacity: 0.7;
 
+  transition: all 0.1s ease-in-out;
   position: relative;
   overflow: hidden;
   background: transparent;
@@ -169,6 +170,10 @@ body {
   border-radius: var(--buttonBorderRadius);
   font-size: var(--buttonFontSize);
   cursor: pointer;
+}
+
+.calculator .keypad .row button:active {
+  transform: scale(0.98);
 }
 
 .calculator .keypad .row button::before {
@@ -191,7 +196,11 @@ body {
 }
 
 .calculator .keypad .row button:hover::after {
-  opacity: 0.5;
+  opacity: 0.25;
+}
+
+.calculator .keypad .row button.full:hover::after {
+  background: var(--dark);
 }
 
 .calculator .keypad .row button.full {
