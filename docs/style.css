@@ -99,14 +99,18 @@ body {
   width: 100%;
   height: 15%;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   border-radius: var(--displayBorderRadius);
-  text-indent: calc(var(--displayText) * -1);
-  font-size: var(--displayText);
   margin-bottom: var(--displayMarginBottom);
+}
+
+.calculator .display span {
+  text-align: right;
+  width: 99%;
   overflow: hidden;
   user-select: text;
+  text-indent: calc(var(--displayText) * -1);
+  font-size: var(--displayText);
 }
 
 .calculator .display::before {
@@ -207,7 +211,7 @@ body {
   --buttonCount: 1;
 }
 
-.calculator .keypad .row button.cancel::before,
+.calculator .keypad .row button.clear::before,
 .calculator .keypad .row button.delete::before {
   --buttonBackgroundOpacity: 1;
   background: var(--danger);
@@ -241,6 +245,10 @@ body {
     --displayMarginBottom: calc(var(--responsiveUnit) * 1);
 
     height: 10%;
+  }
+
+  .calculator .display span {
+    width: 97%;
   }
 
   .calculator .keypad {
