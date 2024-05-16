@@ -1,4 +1,4 @@
-[![pages-build-deployment](https://github.com/dudushy/calc/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/dudushy/calc/actions/workflows/pages/pages-build-deployment)
+[![pages-build-deployment](https://github.com/Yargs444/calc/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/Yargs444/calc/actions/workflows/pages/pages-build-deployment)
 
-# [calc](https://github.com/dudushy/calc/)
+# [calc](https://github.com/Yargs444/calc/)
 Calculator.
